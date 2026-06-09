@@ -13,7 +13,7 @@ const movieSlice = createSlice({
   reducers: {
     addMovie: (state, action) => {
       const newMovie = {
-        id: state.movies[state.movies.length - 1] + 1,
+        id: state.movies[state.movies.length - 1].id + 1,
         name: action.payload,
       };
       state.movies.push(newMovie);
